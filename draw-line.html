@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<canvas id="canvas" style="border: 1px solid #aaa;display: block;margin:50px auto;"></canvas>
+	<script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById('canvas');
+
+			canvas.width = 1024;
+			canvas.height = 768;
+
+			var context = canvas.getContext("2d")
+			//使用context绘制
+
+			context.moveTo(100,100)             //设置起点
+			context.lineTo(700,700)             //设置直线画到（x,y）
+			context.lineTo(100,700)
+			context.lineTo(100,100)
+    		//context.lineWidth = 5             //设置线条宽度
+    		//context.strokeStyle = "#005588"   //设置外边框颜色
+
+
+    		//以上先设置状态
+
+
+
+			//context.stroke()                   //stroke(笔画的意思)，用于绘制线条
+
+
+			context.fillStyle = "rgb(90,10,30)"  //定义图形内部填充颜色
+			context.fill()                       //调用fill绘制填充的颜色块
+
+			context.lineWidth = 5                //同时加上边框颜色
+			context.strokeStyle = "blue"
+			context.stroke()                     //调用stroke绘制线条
+		}
+	</script>
+</body>
+</html>

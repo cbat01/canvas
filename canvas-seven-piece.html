@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>绘制七巧板</title>
+</head>
+<body>
+	<canvas id="canvas" style="border: 1px solid #aaa; display: block; margin:50px auto;">
+		当前浏览器不支持Canvas，请更换浏览器后再试
+	</canvas>
+	<script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById('canvas');
+
+			canvas.width = 500;
+			canvas.height = 500;
+
+			var context = canvas.getContext("2d")
+			//1
+			context.beginPath()
+			context.moveTo(0,0)
+			context.lineTo(250,250)
+			context.lineTo(0,500)
+			context.closePath()
+
+			context.fillStyle = "blue"
+			context.fill()
+
+			//2
+			context.beginPath()
+			context.moveTo(0,0)
+			context.lineTo(250,250)
+			context.lineTo(500,0)
+			context.closePath()
+
+			context.fillStyle = "green"
+			context.fill()
+
+			//3
+			context.beginPath()
+			context.moveTo(0,500)
+			context.lineTo(125,375)
+			context.lineTo(250,500)
+			context.closePath()
+
+			context.fillStyle = "pink"
+			context.fill()
+
+			//4
+			context.beginPath()
+			context.moveTo(125,375)
+			context.lineTo(250,250)
+			context.lineTo(375,375)
+			context.lineTo(250,500)
+			context.closePath()
+
+			context.fillStyle = "grey"
+			context.fill()
+
+			//5
+			context.beginPath()
+			context.moveTo(250,250)
+			context.lineTo(375,125)
+			context.lineTo(375,375)
+			context.closePath()
+
+			context.fillStyle = "yellow"
+			context.fill()
+
+			//6
+			context.beginPath()
+			context.moveTo(500,0)
+			context.lineTo(500,250)
+			context.lineTo(375,375)
+			context.lineTo(375,125)
+			context.closePath()
+
+			context.fillStyle = "red"
+			context.fill()
+
+			//7
+			context.beginPath()
+			context.moveTo(500,500)
+			context.lineTo(250,500)
+			context.lineTo(500,250)
+			context.closePath()
+
+			context.fillStyle = "orange"
+			context.fill()
+
+			
+
+		}
+	</script>
+</body>
+</html>
