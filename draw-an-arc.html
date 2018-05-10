@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>绘制弧线</title>
+</head>
+<body>
+	<!--
+		context.arc(
+			centerx,centery,radius,         圆心x,圆心y,半径
+			startingAngle,endingAngle,      开始弧度值，结束弧度值
+			anticlockwise = false           顺时针/逆时针   不写默认顺时针
+		)
+	-->
+	<canvas id="canvas" style="border: 1px solid #aaa;display: block;margin:50px auto;"></canvas>
+	<script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById('canvas');
+
+			canvas.width = 1024;
+			canvas.height = 768;
+
+			var context = canvas.getContext("2d");
+
+			context.lineWidth = 5
+			context.strokeStyle = "#005588"
+			context.arc(300,300,200,0,0.5*Math.PI,true)  //true逆时针
+			//无论顺时针/逆时针，0PI，0.5PI，1PI，1.5PI位置不变，
+			context.stroke()
+		}
+	</script>
+</body>
+</html>
